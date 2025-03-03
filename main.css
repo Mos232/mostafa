@@ -3,34 +3,209 @@
   box-sizing: border-box;
   margin: 0;
 }
-
+div.image1 {
+  position: sticky;
+  top: 0;
+  z-index: 998;
+}
 div.image1 > img {
   width: 100%;
   height: 60px;
   background-color: #cc1335;
+
   display: block;
 }
-div.form > label {
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 25px 15px;
+  direction: rtl;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+  max-width: 1400px;
+}
+.nav-container > div.dig {
+  width: 250px;
+}
+.nav-container > div.dig > img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+.search-box {
+  position: relative;
+  flex-grow: 1;
+  max-width: 600px;
+}
+
+.search-input {
   width: 100%;
-  height: 100px;
-  padding: 20px;
-  margin: 0 auto;
-  background-color: whitesmoke;
+  padding: 0.7rem 2.5rem 0.7rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #ef4056;
+  box-shadow: 0 0 0 3px #ffeff1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  pointer-events: none;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  border: 1px solid black;
+  border-radius: 16px;
+}
+.auth-buttons > img {
+  width: 30px;
+  object-fit: contain;
+}
+
+.nav-container > img {
+  width: 30px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.login-btn {
+  padding: 0.7rem 1.2rem;
+  background: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  color: #424750;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.signup-btn {
+  padding: 0.7rem 1.2rem;
+  background-color: #ef4056;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.signup-btn:hover {
+  background-color: #d32f2f;
+}
+
+.stories-container {
+  width: 100%;
+  padding: 20px 10px;
+  background: #f5f5f5;
+  direction: rtl;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.story-item {
   display: inline-block;
+  width: 80px;
+  margin: 0 10px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.story-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  padding: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.story-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.story-title {
+  font-size: 12px;
+  color: #444;
+  white-space: normal;
+  line-height: 1.4;
+}
+
+/* اسکرول بار مخفی */
+::-webkit-scrollbar {
+  display: none;
+}
+div.forush {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
   direction: rtl;
 }
-div.form > label > input {
-  margin: 12px 200px;
-  width: 45%;
-  height: 40px;
-  display: inline-block;
+div.forush > div.forush1 {
+  width: 80%;
+  height: 100%;
 }
-::placeholder {
-  color: red;
+div.forush > div.forush1 > a {
+  display: flex;
+  text-decoration: none;
+  width: 85%;
+  height: 100%;
+}
+
+div.forush > div.forush1 > a > img {
+  object-fit: contain;
+  width: 30px;
+  height: 50px;
+  margin: 0 10px;
+}
+div.forush > div.forush1 > a > span {
+  transform: translateY(6px);
   font-size: medium;
-  font-weight: 25px;
-  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  color: black;
 }
+div.forush2 {
+  width: 250px;
+  height: 40px;
+  border-radius: 16px;
+  background-color: #f5c45355;
+  margin: 0 auto;
+}
+div.forush2 > img {
+  width: 38px;
+  height: 38px;
+  color: rgb(255, 166, 0);
+}
+div.forush2 > span {
+  color: rgb(255, 111, 0);
+}
+
 div.cal {
   position: fixed;
   background-color: rgb(213, 27, 27);
@@ -57,13 +232,10 @@ div.ghesti {
   direction: ltr;
   display: flex;
   gap: 5%;
-
 }
 
-div.ghesti > div{
+div.ghesti > div {
   width: 10%;
-
-
 }
 div.ghesti > div > a {
   display: flex;
@@ -73,15 +245,12 @@ div.ghesti > div > a {
   gap: 10px;
   margin-top: 25px;
   text-decoration: none;
-
 }
 div.ghesti > div > a > img {
-  width:52px;
+  width: 52px;
   object-fit: fill;
- 
 }
-div.ghesti > div > a > img > *span {
-  
+div.ghesti > div > a > img > span {
   font-weight: bolder;
   text-align: center;
   color: #0c0c0c;
@@ -89,14 +258,15 @@ div.ghesti > div > a > img > *span {
 section.slider3 {
   width: 84%;
   padding: 20px;
-  background-color: crimson;
+  background-color: rgb(220, 20, 20);
   margin: 50px auto;
   border-radius: 16px;
+  height: 300px;
+  direction: rtl;
 }
 .swiper3 {
   width: 100%;
   height: 100%;
-  
 }
 
 .swiper-slide {
@@ -116,7 +286,6 @@ section.slider3 {
 }
 div.suggest {
   width: 100%;
-
   background-color: bisque;
   margin: 25px auto;
 }
@@ -187,7 +356,6 @@ div.shegeft {
   height: 100%;
   background-color: rgb(244, 39, 39);
   margin: auto;
- 
 }
 div.shegeft > a > img {
   width: 80px;
@@ -205,7 +373,6 @@ div.shegeft > a {
   text-decoration: none;
   padding: 8px 16px;
   gap: 10px;
-
 }
 
 div.shegeft > a > img.amazings {
@@ -217,9 +384,6 @@ div.shegeft > a > div {
   background-color: white;
   justify-content: space-evenly;
   width: 80%;
- 
-
- 
 }
 div.shegeft > a > div > span {
   width: 26px;
@@ -238,41 +402,145 @@ div.shegeft > a > div > i {
   font-style: normal;
   color: white;
 }
-div.shegeft > a >p{
+div.shegeft > a > p {
   display: flex;
   font-weight: 600;
   color: white;
   gap: 2px;
   align-items: center;
 }
-div.shegeft > a >p> span{
+div.shegeft > a > p > span {
   order: 1;
   font-weight: 600;
-
 }
 
-div.tree{
+div.tree {
   display: flex;
-width: 100%;
-height: 100%;
-margin: 10px -30px;
-padding: 30px;
-border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  margin: 10px -30px;
+  padding: 30px;
+  border-radius: 30px;
 }
-div.tree>.div{
+div.tree > .div {
   border-radius: 25px;
   padding: 15px;
   background: bisque;
-
 }
 
-div.tree img{
+div.tree img {
   display: flex;
-  width:95%;
-  height:75%;
+  width: 95%;
+  height: 75%;
   margin: 10px 25px;
   object-fit: fill;
   border-radius: 25px;
+}
+
+div.market {
+  width: 90%;
+  height: 90%;
+  border-radius: 16px;
+  direction: rtl;
+  background-color: bisque;
+  display: flex;
+  margin: auto;
+}
+div.market > div.takhfif {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-flow: row;
+  justify-content: start;
+  margin: 25px 25px;
+}
+div.market > div.takhfif img {
+  width: 75%;
+  object-fit: cover;
+  overflow: hidden;
+}
+div.market > div.takhfif p {
+  border-radius: 14px;
+  height: 35px;
+  color: #fff;
+  background-color: green;
+  width: 20%;
+  padding: 10px;
+  font-weight: 700;
+  line-height: 0.5;
+  font-size: bold;
+  font-weight: bold;
+}
+div.market > div.rice {
+  width: 50%;
+  height: 40%;
+
+  flex-flow: row;
+}
+div.rice > div.radio {
+  width: 60%;
+  height: 40%;
+  display: flex;
+  flex-flow: row;
+  gap: 23px;
+  align-items: center;
+  margin: 20px 40px;
+  justify-content: flex-end;
+}
+
+div.rice > div.radio img {
+  width: 65px;
+  height: 50px;
+  background-color: crimson;
+  border-radius: 16px;
+  object-fit: cover;
+  overflow: hidden;
+}
+div.rice > div.radio > a > span {
+  border-radius: 30px;
+  background-color: crimson;
+  color: #fff;
+  width: 25px;
+  text-decoration: none;
+}
+
+div.rice > div.radio > p {
+  border-radius: 250px;
+  width: 300px;
+  height: 60px;
+  background-color: #fff;
+  color: green;
+  font-size: larger;
+  font-weight: bold;
+  font-style: italic;
+  transform: translateX(-100px);
+}
+
+div.re {
+  width: 88%;
+  height: 100%;
+
+  display: flex;
+  margin: 15px auto;
+  justify-content: space-evenly;
+  gap: 5px;
+}
+div.re > div.re1 {
+  width: 95%;
+  margin: 10px 10px;
+}
+div.re > div.re1 > a {
+  display: flex;
+  gap: 5px;
+  margin: 0 10px;
+  width: 100%;
+  height: 100%;
+}
+div.re > div.re1 > a > img {
+  object-fit: contain;
+  width: 22%;
+  height: 100%;
+  border-radius: 16px;
 }
 
 div.box > .a {
@@ -486,7 +754,12 @@ span.w {
 span.x {
   color: var(--color-dark-neutral-300);
 }
-.swiper {
+div.barca {
+  margin: 40px auto;
+  width: 90%;
+  height: auto;
+}
+div.barca > .swiper2 {
   width: 100%;
   height: 100%;
 }
@@ -507,15 +780,10 @@ span.x {
   object-fit: contain;
 }
 
-div.barsa {
-  margin: 20px auto;
-  width: 80%;
-  height: 200px;
-}
-
 div.persil > * {
   display: flex;
   justify-content: center;
+  margin: 20px;
 }
 div.persil > a > img {
   margin-top: 15px;
@@ -534,9 +802,14 @@ div.category {
   padding-bottom: 40px;
   position: relative;
   display: flex;
+  direction: rtl;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+h3.category {
+  text-align: center;
+  margin-top: 25px;
 }
 
 div.category > div.cat {
@@ -554,28 +827,139 @@ div.category > div.cat {
   margin: 4px;
   padding: 70px;
 }
+div.category > div.cat > a {
+  display: flex;
+  flex-flow: column;
+  width: 140px;
+  height: 70px;
+}
 div.category > div.cat > a > img {
   width: 120px;
   height: 100px;
-  object-fit: fill;
+  object-fit: contain;
   border-radius: 25px;
   margin-bottom: 100px;
   transform: translateY(-40px);
 }
-
-div.tea > a > img {
-  width: 40%;
-  height: 30%;
-  position: relative;
-  display: inline-block;
-  border-radius: 16px;
-  row-gap: 5px;
-  margin: 30px 25px 25px 25px;
-  object-fit: cover;
+div.tea {
+  width: 100%;
+  height: 100%;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
 }
-h1{
+
+div.tea > a {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+div.tea > a > img {
+  object-fit: cover;
+  width: 660px;
+  height: 240px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+}
+
+.product-grid {
+  display: grid;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 20px 0;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
   text-align: center;
-  margin: 35px auto;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.product a {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+div.first > img {
+  width: 100px;
+  height: 100px;
+}
+
+div.star {
+  width: 100%;
+  height: 100%;
+  background-color: beige;
+  border: 1px solid black;
+  display: flex;
+  border-radius: 12px;
+  position: relative;
+  direction: rtl;
+  margin: 25px 0;
+}
+div.star > div.star2 {
+  width: 25%;
+  height: 100%;
+  background-color: aliceblue;
+  border: 1px solid black;
+}
+div.star > div.star2 > div {
+}
+div.star > div.star2 > div.mo1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 10px;
+  width: 60px;
+  height: 120px;
+}
+div.star > div.star2 > div.mo1 > img {
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+div.star > div.star2 > div.mo2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  width: 60px;
+  height: 120px;
+}
+div.star > div.star2 > div.mo2 > img {
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+span.mo {
+  margin-right: 70px;
+  margin-top: 60px;
+}
+
+h1.gitar {
+  text-align: center;
+  margin-top: 35px auto;
 }
 .product-container {
   display: grid;
@@ -589,11 +973,11 @@ h1{
   grid-gap: 20px;
   justify-content: center;
 }
-div.number{
+div.number {
   color: rgb(26, 130, 215);
   margin: 15px;
 }
-div.img img{
+div.img img {
   width: 90px;
   height: 120px;
   object-fit: cover;
@@ -613,4 +997,1517 @@ div.product-item .number {
 div.product-item .text {
   font-size: 16px;
   flex-grow: 1;
+}
+
+div.panbe {
+  width: 92%;
+  height: 100%;
+  border-radius: 16px;
+  margin: 20px auto;
+}
+div.panbe > a {
+  width: 100%;
+  height: inherit;
+  border-radius: 16px;
+  margin-right: 25px;
+}
+div.panbe > a > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  margin-right: 25px;
+}
+h4.montakhab {
+  text-align: center;
+  color: black;
+  margin-bottom: 15px;
+}
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj1 {
+  width: 20%;
+  height: 100%;
+
+  grid-column: 1/6;
+  grid-row: 1/3;
+}
+div.haraj > div.haraj1 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj1 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj1 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj1 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj1 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj2 {
+  width: 20%;
+  height: 100%;
+  grid-column: 2/6;
+  grid-row: 1/3;
+}
+div.haraj > div.haraj2 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj2 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj2 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj2 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj2 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj3 {
+  width: 20%;
+  height: 100%;
+  grid-column: 3/6;
+  grid-row: 1/3;
+}
+div.haraj > div.haraj3 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj3 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj3 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj3 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj3 > div.mahsol > span {
+  margin-right: 30px;
+}
+
+div.haraj > div.haraj3 > div > h5 {
+  text-align: center;
+  font-size: large;
+  margin-right: 15px;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj4 {
+  width: 20%;
+  height: 100%;
+  grid-column: 4/6;
+  grid-row: 1/3;
+}
+div.haraj > div.haraj4 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj4 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj4 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj4 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj4 > div.mahsol > span {
+  margin-right: 30px;
+}
+div.haraj > div.haraj4 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj5 {
+  width: 20%;
+  height: 100%;
+  grid-column: 5/6;
+  grid-row: 1/3;
+}
+div.haraj > div.haraj5 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj5 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj5 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj5 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj5 > div.mahsol > span {
+  margin-right: 30px;
+}
+div.haraj > div.haraj5 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj6 {
+  width: 20%;
+  height: 100%;
+  grid-column: 6/6;
+  grid-row: 1/3;
+}
+div.haraj > div.haraj6 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj6 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj6 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj6 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj6 > div.mahsol > span {
+  margin-right: 30px;
+}
+div.haraj > div.haraj6 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj7 {
+  width: 20%;
+  height: 100%;
+  grid-column: 2/6;
+  grid-row: 2/3;
+}
+div.haraj > div.haraj7 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj7 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj7 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj7 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj7 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj8 {
+  width: 20%;
+  height: 100%;
+  grid-column: 3/6;
+  grid-row: 2/3;
+}
+div.haraj > div.haraj8 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj8 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj8 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj8 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj8 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj9 {
+  width: 20%;
+  height: 100%;
+  grid-column: 4/6;
+  grid-row: 2/3;
+}
+div.haraj > div.haraj9 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj9 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj9 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj9 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj9 > div.mahsol > span {
+  margin-right: 30px;
+}
+div.haraj > div.haraj9 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj10 {
+  width: 20%;
+  height: 100%;
+  grid-column: 5/6;
+  grid-row: 2/3;
+}
+div.haraj > div.haraj10 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj10 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj10 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj10 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj10 > div.mahsol > span {
+  margin-right: 30px;
+}
+div.haraj > div.haraj10 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj11 {
+  width: 20%;
+  height: 100%;
+  grid-column: 6/6;
+  grid-row: 2/3;
+}
+div.haraj > div.haraj11 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj11 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj11 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj11 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj11 > div.mahsol > span {
+  margin-right: 30px;
+}
+div.haraj > div.haraj11 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj12 {
+  width: 20%;
+  height: 100%;
+  grid-column: 1/6;
+  grid-row: 3/3;
+}
+div.haraj > div.haraj12 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj12 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj12 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj12 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj12 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj13 {
+  width: 20%;
+  height: 100%;
+  grid-column: 2/6;
+  grid-row: 3/3;
+}
+div.haraj > div.haraj13 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj13 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj13 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj13 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj13 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj14 {
+  width: 20%;
+  height: 100%;
+  grid-column: 3/6;
+  grid-row: 3/3;
+}
+div.haraj > div.haraj14 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj14 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj14 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj14 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj14 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj15 {
+  width: 20%;
+  height: 100%;
+  grid-column: 4/6;
+  grid-row: 3/3;
+}
+div.haraj > div.haraj15 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj15 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj15 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj15 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj15 > div.mahsol > span {
+  margin-right: 30px;
+}
+div.haraj > div.haraj15 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj16 {
+  width: 20%;
+  height: 100%;
+  grid-column: 5/6;
+  grid-row: 3/3;
+}
+div.haraj > div.haraj16 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj16 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj16 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj16 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj16 > div.mahsol > span {
+  margin-right: 30px;
+}
+div.haraj > div.haraj16 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj17 {
+  width: 20%;
+  height: 100%;
+  grid-column: 6/6;
+  grid-row: 3/3;
+}
+div.haraj > div.haraj17 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj17 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj17 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj17 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj17 > div.mahsol > span {
+  margin-right: 30px;
+}
+div.haraj > div.haraj17 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.haraj {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  direction: rtl;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 250px);
+}
+div.haraj > div.haraj18 {
+  width: 20%;
+  height: 100%;
+  grid-column: 1/6;
+  grid-row: 2/3;
+}
+div.haraj > div.haraj18 > div.mo {
+  width: 200px;
+  height: 180px;
+  margin: 10px auto;
+}
+div.haraj > div.haraj18 > div.mo > img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+}
+div.haraj > div.haraj18 > div.mahsol {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+div.haraj > div.haraj18 > div.mahsol > span.te {
+  width: 38px;
+  text-align: center;
+  height: 25px;
+  border-radius: 10px;
+  background-color: red;
+  color: whitesmoke;
+}
+div.haraj > div.haraj18 > div.mahsol > span {
+  margin-right: 30px;
+}
+div.haraj > div.haraj18 > div > h5 {
+  text-align: center;
+  font-size: large;
+}
+
+div.dagh {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  margin: 25px auto;
+
+  border: 3px solid black;
+  border-radius: 15px;
+  display: grid;
+  column-gap: 25px;
+  row-gap: 15px;
+  direction: rtl;
+  grid-template-columns: repeat(4, 2fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+div.dagh > div.dagh1 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin-bottom: 15px;
+  grid-column: 1/4;
+  grid-row: 1/4;
+  justify-content: center;
+}
+div.dagh > div.dagh1 > img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+}
+div.dagh > div.dagh1 > div {
+  width: 120px;
+  display: flex;
+  gap: 10px;
+  line-height: 130px;
+}
+div.dagh > div.dagh1 > div > span.sa {
+  font-size: x-large;
+  font-weight: 600;
+  color: #2586ff;
+}
+div.dagh > div.dagh2 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+
+  grid-column: 2/4;
+  grid-row: 1/4;
+  justify-content: center;
+}
+div.dagh > div.dagh2 > img {
+  width: 120px;
+  padding: 10px;
+  height: 140px;
+  object-fit: cover;
+}
+div.dagh > div.dagh2 > div {
+  width: 150px;
+  display: flex;
+  gap: 10px;
+  line-height: 130px;
+}
+div.dagh > div.dagh2 > div > span.sa {
+  font-size: x-large;
+  font-weight: 600;
+  color: #2586ff;
+}
+div.dagh > div.dagh3 {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+
+  grid-column: 3/4;
+  grid-row: 1/4;
+  justify-content: center;
+}
+div.dagh > div.dagh3 > img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+}
+div.dagh > div.dagh3 > div {
+  width: 150px;
+  display: flex;
+  gap: 10px;
+  line-height: 130px;
+}
+div.dagh > div.dagh3 > div > span.sa {
+  font-size: x-large;
+  font-weight: 600;
+  color: #2586ff;
+}
+
+div.dagh > div.dagh4 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+
+  grid-column: 4/4;
+  grid-row: 1/4;
+  justify-content: center;
+}
+div.dagh > div.dagh4 > img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+}
+div.dagh > div.dagh4 > div {
+  width: 100px;
+  display: flex;
+  gap: 10px;
+  line-height: 130px;
+}
+div.dagh > div.dagh4 > div > span.sa {
+  font-size: x-large;
+  font-weight: 600;
+  color: #2586ff;
+}
+div.dagh > div.dagh5 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+
+  grid-column: 1/4;
+  grid-row: 2/4;
+  justify-content: center;
+}
+div.dagh > div.dagh5 > img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+}
+div.dagh > div.dagh5 > div {
+  width: 100px;
+  display: flex;
+  gap: 10px;
+  line-height: 130px;
+}
+div.dagh > div.dagh5 > div > span.sa {
+  font-size: x-large;
+  font-weight: 600;
+  color: #2586ff;
+}
+div.dagh > div.dagh6 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  grid-column: 2/4;
+  grid-row: 2/4;
+  justify-content: center;
+}
+div.dagh > div.dagh6 > img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+}
+div.dagh > div.dagh6 > div {
+  width: 100px;
+  display: flex;
+  gap: 10px;
+  line-height: 130px;
+}
+div.dagh > div.dagh6 > div > span.sa {
+  font-size: x-large;
+  font-weight: 600;
+  color: #2586ff;
+}
+div.dagh > div.dagh7 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+
+  grid-column: 3/4;
+  grid-row: 2/4;
+  justify-content: center;
+}
+div.dagh > div.dagh7 > img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+}
+div.dagh > div.dagh7 > div {
+  width: 100px;
+  display: flex;
+  gap: 10px;
+  line-height: 130px;
+}
+div.dagh > div.dagh7 > div > span.sa {
+  font-size: x-large;
+  font-weight: 600;
+  color: #2586ff;
+}
+div.dagh > div.dagh8 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+
+  grid-column: 4/4;
+  grid-row: 2/4;
+  justify-content: center;
+}
+div.dagh > div.dagh8 > img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+}
+div.dagh > div.dagh8 > div {
+  width: 100px;
+  display: flex;
+  gap: 10px;
+  line-height: 130px;
+}
+div.dagh > div.dagh8 > div > span.sa {
+  font-size: x-large;
+  font-weight: 600;
+  color: #2586ff;
+}
+div.dagh > div.dagh9 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+
+  grid-column: 1/4;
+  grid-row: 3/4;
+  justify-content: center;
+}
+div.dagh > div.dagh9 > img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+}
+div.dagh > div.dagh9 > div {
+  width: 100px;
+  display: flex;
+  gap: 10px;
+  line-height: 130px;
+}
+div.dagh > div.dagh9 > div > span.sa {
+  font-size: x-large;
+  font-weight: 600;
+  color: #2586ff;
+}
+div.dagh > div.dagh10 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+
+  grid-column: 2/4;
+  grid-row: 3/4;
+  justify-content: center;
+}
+div.dagh > div.dagh10 > img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+}
+div.dagh > div.dagh10 > div {
+  width: 100px;
+  display: flex;
+  gap: 10px;
+  line-height: 130px;
+}
+div.dagh > div.dagh10 > div > span.sa {
+  font-size: x-large;
+  font-weight: 600;
+  color: #2586ff;
+}
+div.dagh > div.dagh11 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  grid-column: 3/4;
+  grid-row: 3/4;
+  justify-content: center;
+}
+div.dagh > div.dagh11 > img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+}
+div.dagh > div.dagh11 > div {
+  width: 100px;
+  display: flex;
+  gap: 10px;
+  line-height: 130px;
+}
+div.dagh > div.dagh11 > div > span.sa {
+  font-size: x-large;
+  font-weight: 600;
+  color: #2586ff;
+}
+div.dagh > div.dagh12 {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  grid-column: 4/4;
+  grid-row: 3/4;
+  justify-content: center;
+}
+div.dagh > div.dagh12 > img {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+}
+div.dagh > div.dagh12 > div {
+  width: 100px;
+  display: flex;
+  gap: 10px;
+  line-height: 130px;
+}
+div.dagh > div.dagh12 > div > span.sa {
+  font-size: x-large;
+  font-weight: 600;
+  color: #2586ff;
+}
+div.precake {
+  display: flex;
+  justify-content: space-between;
+  direction: rtl;
+}
+div.precake > h5.pre {
+  font-size: large;
+  margin-top: 15px;
+}
+div.precake > h5.avant {
+  font-size: medium;
+  margin-left: 25px;
+
+  margin-top: 15px;
+}
+
+div.cake {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+  margin: 15px 10px;
+  direction: rtl;
+  gap: 25px;
+}
+div.cake > div.yazdi {
+  width: 23%;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 100%;
+}
+div.cake > div.yazdi > a {
+  text-decoration: none;
+}
+div.cake > div.yazdi > a > div {
+  display: flex;
+  flex-flow: column;
+}
+h5.cake {
+  direction: rtl;
+}
+div.cake > div.yazdi > a > div > img {
+  width: 323px;
+  height: 201px;
+  object-fit: cover;
+}
+footer > div.kala {
+  direction: rtl;
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+footer > div.kala > img {
+  width: 195px;
+  height: 30px;
+  object-fit: contain;
+  margin-top: 25px;
+}
+footer > div.kala > span {
+  width: 150px;
+  height: 35px;
+  border: 2px solid black;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+  text-align: center;
+}
+div.poshtibani {
+  direction: rtl;
+}
+div.express {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+  margin: 25px 15px;
+  direction: rtl;
+}
+div.express > div.zemanat {
+  width: 18%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+div.express > div.zemanat > a {
+  text-decoration: none;
+  width: 100px;
+  height: inherit;
+  text-align: center;
+}
+div.express > div.zemanat > a > img {
+  width: 85px;
+  height: 70px;
+  object-fit: contain;
+}
+div.express > div.zemanat > a > span {
+  color: #0c0c0c;
+}
+
+div.koli {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 15px;
+  direction: rtl;
+}
+div.koli > div.koli1 {
+  width: 20%;
+  list-style: none;
+  line-height: 35px;
+  height: 100%;
+}
+
+div.koli > div.koli2 {
+  width: 20%;
+  list-style: none;
+  line-height: 35px;
+  height: 100%;
+}
+
+div.koli > div.koli3 {
+  width: 20%;
+  list-style: none;
+  line-height: 35px;
+  height: 100%;
+}
+
+div.koli > div.koli4 {
+  width: 25%;
+  height: 100%;
+
+  list-style: none;
+}
+div.koli > div.koli4 > ul > li.svg {
+  display: flex;
+  gap: 15px;
+  width: 50px;
+  height: 50px;
+  list-style: none;
+  background-color: beige;
+  margin: 25px 15px;
+}
+form.fo {
+  border-radius: 16px;
+}
+input.fo {
+  border-radius: 16px;
+  height: 40px;
+  text-align: justify;
+}
+input.so {
+  height: 40px;
+  width: 50px;
+  border-radius: 16px;
+}
+
+div.gerd {
+  width: 100%;
+  height: 100%;
+  direction: rtl;
+  display: flex;
+  align-items: center;
+  background-color: #3c4b6d;
+  margin: 15px 5px;
+  padding: 10px;
+  border-radius: 16px;
+}
+div.gerd > div.gerd1 {
+  width: 30%;
+  height: auto;
+}
+div.gerd > div.gerd1 > a {
+  width: 100%;
+  height: auto;
+  text-decoration: none;
+}
+
+div.gerd > div.gerd1 > a > span {
+  font-size: x-large;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 800;
+  font-style: italic;
+  color: whitesmoke;
+}
+
+div.gerd > div.gerd1 > a > img {
+  width: 80px;
+  height: 120px;
+  margin-left: 20px;
+  object-fit: contain;
+}
+
+div.gerd > div.gerd2 {
+  width: 70%;
+  height: auto;
+  display: flex;
+  direction: ltr;
+}
+div.gerd > div.gerd2 > a {
+  width: 100%;
+  height: auto;
+}
+div.gerd > div.gerd2 > a > img {
+  width: 100x;
+  height: auto;
+  margin: 0 15px;
+}
+img.foot {
+  border: 1px solid black;
+  background-color: whitesmoke;
+  width: 40px;
+}
+
+div.js {
+  width: 90%;
+  height: 100px;
+  padding: 20px;
+  display: flex;
+  transform: translate(-650px, -150px);
+  gap: 10px;
+}
+div.js > a {
+  width: 100%;
+  height: auto;
+}
+div.js > a > img {
+  object-fit: cover;
+  width: 100px;
+  border-radius: 16px;
+  margin: 0 10px;
+  border: 1px solid grey;
+}
+div.jet {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f1;
+}
+div.jet > a {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+}
+div.jet > a > img {
+  width: 200px;
+  border: 10px solid #f0f0f1;
+  margin: 5px;
+}
+
+div.hamrah {
+  width: 60px;
+  height: auto;
+  border-radius: 220px;
+  background-color: #cd1e38;
+  color: whitesmoke;
+  position: sticky;
+  bottom: 30px;
+  left: 20px;
+  z-index: 11;
+  direction: rtl;
+}
+div.hamrah > a {
+  width: 100%;
+  height: auto;
+  color: whitesmoke;
+}
+
+div.hamrah > a > img {
+  object-fit: contain;
+  width: 100%;
+background-color: whitesmoke;
+border: 4px solid rgb(193, 20, 63);
+}
+div.sandogh{
+  width: 150px;
+  height: 70px;
+  border-radius: 60px;
+  z-index:11 ;
+  position: sticky;
+  bottom: 25px;
+left: 4500px;
+  
+}
+div.sandogh>a{
+  width: 100%;
+  height: 70%;
+  line-height: 25px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  border-radius: 250px;
+  background-color: green;
+  
+}
+div.sandogh>a>span{
+  color: white;
+  font-weight: 500;
+}
+div.sandogh>a>image{
+  object-fit: cover;
+  width: 100px;
+  color: whitesmoke;
 }
